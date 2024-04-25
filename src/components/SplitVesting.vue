@@ -278,9 +278,9 @@ const chooseOperation = (op: OperationType) => {
             <input v-model="toAddress" type="text"/>
             <h3>Amount to send (uc4e): </h3>
             <input v-model="amount" type="number"/>
-            <h3>Start time: </h3>
-            <input v-model="createVestingAccountStarttime" type="number"/>
-            <h3>End time: </h3>
+            <h3>Start time (unix timestamp in seconds): </h3>
+            <input v-model="createVestingAccountStarttime" type="number" />
+            <h3>End time (unix timestamp in seconds): </h3>
             <input v-model="createVestingAccountEndtime" type="number"/>
             <button @click="createVestingAccount()">Create vesting account</button>
           </div>
