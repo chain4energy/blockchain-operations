@@ -22,7 +22,7 @@ export function bytesToHex(byteArray) {
 }
 
 export const getFees = () => {
-    const convertedFee = [{amount: String(1000000), denom: "uc4e"}];
+    const convertedFee = [{amount: String(0), denom: "uc4e"}];
     return {gas: String(1000000), amount: convertedFee};
 }
 

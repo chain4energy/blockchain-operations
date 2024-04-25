@@ -13,6 +13,7 @@ import {blockchainConfig} from "../blockchainConfig";
 import {TxRaw} from "../../ts-client/cosmos.tx.v1beta1";
 import {MsgSend} from "../../ts-client/cosmos.bank.v1beta1/types/cosmos/bank/v1beta1/tx";
 import {Keplr} from "@keplr-wallet/types";
+import {customAccountParser} from "./custom_account_parser";
 
 enum OperationType {
   split = "split",
@@ -53,7 +54,7 @@ const connectWithKeplr = async () => {
   client = await SigningStargateClient.connectWithSigner(
       blockchainConfig.rpcUrl,
       offlineSigner,
-      {registry, aminoTypes}
+      {registry, aminoTypes, accountParser: customAccountParser}
   );
 }
 connectWithKeplr()
